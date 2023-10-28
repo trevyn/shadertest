@@ -5,11 +5,13 @@
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_8puxc"]
 shader = ExtResource("1_jr8jw")
+shader_parameter/blue = -1.03
+shader_parameter/timescale = 1.78
 
 [node name="Node2D" type="Node2D"]
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 material = SubResource("ShaderMaterial_8puxc")
-position = Vector2(109, 52.7499)
-scale = Vector2(3.46094, 1.47266)
+position = Vector2(206.25, 140.25)
+scale = Vector2(4.98047, 2.83985)
 texture = ExtResource("2_1scnd")
