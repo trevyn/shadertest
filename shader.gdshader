@@ -17,8 +17,8 @@ vec3 palette( float t ) {
 }
 
 void fragment() {
-	vec3 iResolution = vec3(1000.0, 1000.0, 0.0);
-    vec2 uv = (FRAGCOORD.xy * 2.0 - iResolution.xy * 1.4) / iResolution.y;
+	vec3 iResolution = vec3(1.0, 1.0, 0.0);
+    vec2 uv = (UV * 2.0 - iResolution.xy * 1.4) / iResolution.y;
     vec2 uv0 = uv;
     vec3 finalColor = vec3(0.0);
 	float iTime = TIME * timescale;

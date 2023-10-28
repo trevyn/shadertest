@@ -1,17 +1,20 @@
-[gd_scene load_steps=4 format=3 uid="uid://cm1rlp0hr6eq0"]
+[gd_scene load_steps=5 format=3 uid="uid://cm1rlp0hr6eq0"]
 
 [ext_resource type="Shader" path="res://shader.gdshader" id="1_jr8jw"]
 [ext_resource type="Texture2D" uid="uid://cagjxb3ec4ii3" path="res://icon.svg" id="2_1scnd"]
+[ext_resource type="Script" path="res://Sprite2D.gd" id="3_myghn"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_8puxc"]
 shader = ExtResource("1_jr8jw")
 shader_parameter/blue = -1.03
-shader_parameter/timescale = 1.78
+shader_parameter/timescale = 0.14
 
 [node name="Node2D" type="Node2D"]
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 material = SubResource("ShaderMaterial_8puxc")
-position = Vector2(206.25, 140.25)
-scale = Vector2(4.98047, 2.83985)
+position = Vector2(2.08165e-12, 2.08165e-12)
+scale = Vector2(20, 20)
 texture = ExtResource("2_1scnd")
+centered = false
+script = ExtResource("3_myghn")
