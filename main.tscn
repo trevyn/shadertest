@@ -8,6 +8,7 @@
 shader = ExtResource("1_jr8jw")
 shader_parameter/blue = -1.03
 shader_parameter/timescale = 0.14
+shader_parameter/pos = Vector2(0, 0)
 
 [node name="Node2D" type="Node2D"]
 

@@ -1,5 +1,7 @@
 extends Sprite2D
 
+var pos = Vector2(0,0)
+
 func _ready():
 	on_size_changed()
 	get_tree().get_root().connect("size_changed", on_size_changed)
@@ -14,5 +16,7 @@ func on_size_changed():
 	set_scale(Vector2(my_scale, my_scale))
 
 func _physics_process(delta):
-	var input_direction = Input.get_vector("left", "right", "up", "down")
-	self.material.set_shader_parameter("blue", input_direction.x)
+	var dir = Input.get_vector("left", "right", "up", "down")
+	pos += (dir/100)
+	self.material.set_shader_parameter("pos", pos)
+

@@ -2,6 +2,7 @@ shader_type canvas_item;
 
 uniform float blue = 1.0;
 uniform float timescale = 2.0;
+uniform vec2 pos = vec2(0.0, 0.0);
 
 void vertex() {
 	// Called for every vertex the material is visible on.
@@ -18,7 +19,7 @@ vec3 palette( float t ) {
 
 void fragment() {
 	vec3 iResolution = vec3(1.0, 1.0, 0.0);
-    vec2 uv = (UV * 2.0 - iResolution.xy * 1.4) / iResolution.y;
+    vec2 uv = ((UV + pos) * 2.0 - iResolution.xy * 1.4) / iResolution.y;
     vec2 uv0 = uv;
     vec3 finalColor = vec3(0.0);
 	float iTime = TIME * timescale;
