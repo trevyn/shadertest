@@ -12,3 +12,7 @@ func on_size_changed():
 	var my_scale = viewportWidth / texture.get_size().x
 
 	set_scale(Vector2(my_scale, my_scale))
+
+func _physics_process(delta):
+	var input_direction = Input.get_vector("left", "right", "up", "down")
+	self.material.set_shader_parameter("blue", input_direction.x)
