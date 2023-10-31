@@ -1,6 +1,7 @@
 extends Sprite2D
 
 var pos = Vector2(0,0)
+var acc = Vector2(0,0)
 
 func _ready():
 	on_size_changed()
@@ -17,6 +18,7 @@ func on_size_changed():
 
 func _physics_process(delta):
 	var dir = Input.get_vector("left", "right", "up", "down")
-	pos += (dir/100)
+	acc=acc.lerp(dir, 0.15)
+	pos+=(acc/100)
 	self.material.set_shader_parameter("pos", pos)
 
